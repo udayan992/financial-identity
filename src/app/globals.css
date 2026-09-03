@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --primary: #1a3150;
+  --primary-foreground: #ffffff;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --border: #e2e8f0;
+  --accent: #f59e0b;
+  --accent-foreground: #1a3150;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .passport-texture {
+    background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 8px,
+        rgba(26, 49, 80, 0.03) 8px,
+        rgba(26, 49, 80, 0.03) 16px
+      ),
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 8px,
+        rgba(26, 49, 80, 0.02) 8px,
+        rgba(26, 49, 80, 0.02) 16px
+      );
+  }
+}
